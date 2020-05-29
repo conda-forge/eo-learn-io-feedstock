@@ -1,18 +1,18 @@
 {% set name = "eo-learn-io" %}
-{% set version = "0.7.2" %}
+{% set version = "0.7.3" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 9d8c2a4672863449d4a20d608b52d20cb99e6f10c6809c5dad1a4d69f5b28266
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 521565336af6b4db579a70f764bb05bcbe537fb7c5d21ca71c60304b12ff6297
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -29,13 +29,13 @@ test:
     - eolearn.io
 
 about:
-  home: "https://github.com/sentinel-hub/eo-learn"
-  license: "MIT"
-  license_family: "MIT"
-  license_file: "LICENSE"
-  summary: "A collection of input/output utilities and EOTasks"
-  doc_url: "https://eo-learn.readthedocs.io/en/latest/eolearn.io.html"
-  dev_url: "https://github.com/sentinel-hub/eo-learn"
+  home: https://github.com/sentinel-hub/eo-learn
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: A collection of input/output utilities and EOTasks
+  doc_url: https://eo-learn.readthedocs.io/en/latest/eolearn.io.html
+  dev_url: https://github.com/sentinel-hub/eo-learn
 
 extra:
   recipe-maintainers:
