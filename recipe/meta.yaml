@@ -39,8 +39,8 @@ about:
 
 extra:
   recipe-maintainers:
+    - mxr-conda
     - mwilson8
-    - dcunn
     - oblute
     - rluria14
     - benhuff
