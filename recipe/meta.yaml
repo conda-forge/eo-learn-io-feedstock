@@ -26,6 +26,7 @@ requirements:
 test:
   imports:
     - eolearn
+    - eolearn.core
     - eolearn.io
 
 about:
