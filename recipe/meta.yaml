@@ -1,5 +1,5 @@
 {% set name = "eo-learn-io" %}
-{% set version = "0.9.2" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 942f22a14f5a18477efbbb1ba1cded0109af895fefeb33fce3b9bb89bd22954a
-  patches:
-    - requirements_setup.patch
+  sha256: af871807366b4bbce14eb45311bf52c76c7b55201db726d6b264933a83f5fd4d
 
 build:
   noarch: python
@@ -28,6 +26,7 @@ requirements:
 test:
   imports:
     - eolearn
+    - eolearn.core
     - eolearn.io
 
 about:
@@ -42,7 +41,3 @@ about:
 extra:
   recipe-maintainers:
     - mxr-conda
-    - mwilson8
-    - oblute
-    - rluria14
-    - benhuff
