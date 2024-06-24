@@ -1,5 +1,5 @@
 {% set name = "eo-learn-io" %}
-{% set version = "0.10.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: af871807366b4bbce14eb45311bf52c76c7b55201db726d6b264933a83f5fd4d
+  sha256: afbd87dca0566475b1678f419a5802c0fd301aba006fae111a4e1d687b2da0e8
 
 build:
   noarch: python
@@ -17,11 +17,16 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.7
   run:
-    - eo-learn-core
-    - python >=3.5
-    - rasterio
+    - boto3
+    - eo-learn-core >=1.0.0
+    - python >=3.7
+    - fiona >=1.8.18
+    - geopandas >=0.8.1
+    - rasterio >=1.2.7
+    - rtree
+    - sentinelhub >=3.4.4
 
 test:
   imports:
